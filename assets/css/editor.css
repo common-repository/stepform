@@ -1,0 +1,224 @@
+.wp-block-stepform-block {
+    min-height: 200px;
+    position: relative;
+}
+
+.wp-block-stepform-block-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.is-selected .wp-block-stepform-block-overlay {
+    animation: stepform-overlay-hide 0.3s ease forwards;
+}
+
+.wp-block-stepform-block-edit {
+    margin: 0;
+    padding: 62px 38px;
+    min-height: 200px;
+    width: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 13px;
+    background: rgba(139,139,150,.1);
+}
+
+.wp-block-stepform-block-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+}
+
+.wp-block-stepform-block-title {
+    font-size: 18px;
+    margin-top: 48px;
+    color: #000000;
+}
+
+
+
+
+.wp-block-stepform-block-openEditor {
+    padding: 4px 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.wp-block-stepform-block-form > div {
+    margin: 0 -10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color .3s ease;
+}
+
+.wp-block-stepform-block-form > div:hover {
+    background-color: #fff;
+}
+
+.wp-block-stepform-block-form > div:hover .wp-block-stepform-block-openEditor {
+    opacity: 1;
+}
+
+.wp-block-stepform-block-form label {
+    padding: 4px 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.wp-block-stepform-block-form input[type=radio] {
+    border: 1px solid #555D66;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 9px;
+}
+.wp-block-stepform-block-form input[type=radio]:checked {
+    border: 1px solid #555D66;
+    background-color: #fff;
+}
+.wp-block-stepform-block-form input[type=radio]:checked:focus {
+    box-shadow: none;
+}
+.wp-block-stepform-block-form input[type=radio]:checked:before {
+    width: 10px;
+    height: 10px;
+    background-color: #32373C;
+    margin: 4px 0 0 4px;
+}
+
+.wp-block-stepform-block-form svg {
+    display: block;
+}
+
+.wp-block-stepform-block-loading {
+    padding: 4px 10px;
+}
+
+.wp-block-stepform-block-loading:hover {
+    background-color: transparent;
+}
+
+.wp-block-stepform-block-more,
+.wp-block-stepform-block-settings {
+    font-size: 14px;
+    color: #1084BA;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    width: fit-content;
+    outline: none;
+}
+
+.wp-block-stepform-block-more:focus,
+.wp-block-stepform-block-settings:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.wp-block-stepform-block-more-0 > div:nth-child(1n+11) {
+    display: none;
+}
+
+.wp-block-stepform-block-more-1 + a {
+    display: none;
+}
+
+.wp-block-stepform-block-footer {
+    margin-top: 28px;
+}
+
+.wp-block-stepform-block-tool.components-button.components-toolbar__control svg,
+.wp-block-stepform-block-tool.components-button.components-toolbar__control:hover svg {
+    color: #fff;
+}
+.wp-block-stepform-block-tool-0.components-button.components-toolbar__control,
+.wp-block-stepform-block-tool-4.components-button.components-toolbar__control,
+.wp-block-stepform-block-tool-5.components-button.components-toolbar__control {
+    opacity: .4;
+    cursor: default;
+}
+.wp-block-stepform-block-tool-0.components-button.components-toolbar__control:hover > svg,
+.wp-block-stepform-block-tool-4.components-button.components-toolbar__control:hover > svg,
+.wp-block-stepform-block-tool-5.components-button.components-toolbar__control:hover > svg {
+    box-shadow: none !important;
+}
+
+.wp-block-stepform-block-mode-0 ~ .wp-block-stepform-block {
+    display: none;
+}
+
+.wp-block-stepform-block-mode-1 ~ .wp-block-stepform-block {
+    display: none;
+}
+.wp-block-stepform-block-mode-1 ~ .wp-block-stepform-block-edit {
+    animation: stepform-to-hide 0.5s ease forwards;
+}
+
+.wp-block-stepform-block-mode-2 ~ .wp-block-stepform-block {
+    animation: stepform-to-show 0.5s ease forwards;
+}
+.wp-block-stepform-block-mode-2 ~ .wp-block-stepform-block-edit {
+    display: none;
+}
+
+.wp-block-stepform-block-mode-3 ~ .wp-block-stepform-block-edit {
+    display: none;
+}
+
+.wp-block-stepform-block-mode-4 ~ .wp-block-stepform-block {
+    animation: stepform-to-hide 0.5s ease forwards;
+}
+.wp-block-stepform-block-mode-4 ~ .wp-block-stepform-block-edit {
+    display: none;
+}
+
+.wp-block-stepform-block-mode-5 ~ .wp-block-stepform-block {
+    display: none;
+}
+.wp-block-stepform-block-mode-5 ~ .wp-block-stepform-block-edit {
+    animation: stepform-to-show 0.5s ease forwards;
+}
+
+
+
+@keyframes stepform-to-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes stepform-to-show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stepform-overlay-hide {
+  0% {
+    height: 100%;
+  }
+
+  90% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}

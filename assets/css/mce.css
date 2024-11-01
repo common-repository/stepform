@@ -1,0 +1,8 @@
+.mce-i-stepFORM-ico:before {
+    content: "";
+    background: url(https://stepform.io/static/toolbar-icon-20x20.png) no-repeat center;
+    background-size: 16px;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
